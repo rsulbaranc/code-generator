@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import * as React from 'react';
+
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+
+  const options = [
+    { label: 'Tabla de empleados', value: '1' },
+    { label: 'Tabla de Productos', value: '2' },
+    { label: 'Tabla de administracion', value: '3' },
+  ];
+
+  const [value, setValue] = React.useState();
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
 
-export default App
+    <div style={{
+      padding: 50,
+      paddingLeft: 75,
+      paddingRight: 75,
+      backgroundColor: '#f5f5f5',
+      borderRadius: 15,
+      boxShadow: '1px 2px 25px gray',
+    }}>
+      <h1>Code Generator</h1>
+      <p>
+        Selecciona tabla deseada:
+      </p>
+
+      <select value={value} onChange={handleChange}>
+        {options.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))}
+      </select>
+      { value && <p>Table opening in new window...</p> }
+    </div>
+
+  );
+};
+
+export default App;
