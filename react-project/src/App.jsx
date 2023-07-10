@@ -26,7 +26,14 @@ const App = () => {
       borderRadius: 15,
       boxShadow: '1px 2px 25px gray',
     }}>
-      <h1>Code Generator</h1>
+      <img
+        src='https://cdn-icons-png.flaticon.com/512/1157/1157109.png'
+        style={{
+          height: '250px',
+          
+        }}
+      />
+      <h1>Generador de código</h1>
       <p>
         Selecciona tabla deseada:
       </p>
@@ -36,7 +43,7 @@ const App = () => {
           <option value={option.value}>{option.label}</option>
         ))}
       </select>
-      { value && <p>Table opening in new window...</p> }
+      {value && <p style={{ paddingTop: 35 }}>Se abrirá la tabla en una nueva ventana...</p>}
     </div>
 
   );
