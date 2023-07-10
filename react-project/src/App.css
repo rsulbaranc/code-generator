@@ -4,3 +4,25 @@
   padding: 2rem;
   text-align: center;
 }
+
+.container {  display: grid;
+  grid-template-columns: 1.7fr 0.3fr; 
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "title title"
+    "inputs buttons"
+    "table buttons";
+}
+
+.title { grid-area: title; }
+
+.buttons { 
+  grid-area: buttons;
+
+}
+
+.inputs { grid-area: inputs; }
+
+.table { grid-area: table; }
