@@ -10,11 +10,14 @@ try {
     console.log(e);
 }
 
+const tableName = 'producto'
+
 pool.query('SELECT * FROM producto', (error, results) => {
     if (error) {
       throw error;
     }
     const data = JSON.stringify(results.rows); // Obtener los datos de la consulta
+    
 
     //console.log(data);
   
@@ -27,6 +30,7 @@ pool.query('SELECT * FROM producto', (error, results) => {
       import sampleData from './assets/sampleData'
       import TableView from './components/TableView';
       
+      const  tableName = ` + tableName + `
       const data = ` + data + `
 
       const MyView = () => {
