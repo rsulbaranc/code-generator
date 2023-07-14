@@ -1,16 +1,1 @@
-[{
-    "id": 1,
-    "first_name": "Ethelred",
-    "last_name": "Slowly",
-    "email": "eslowly0@google.es"
-},{
-    "id": 2,
-    "first_name": "Reta",
-    "last_name": "Woolmer",
-    "email": "rwoolmer1@miibeian.gov.cn"
-},{
-    "id": 3,
-    "first_name": "Arabel",
-    "last_name": "Pestor",
-    "email": "apestor2@bloglovin.com"
-}]
+[{"id":1,"descrip":"pollo"},{"id":2,"descrip":"leche"},{"id":4,"descrip":"leche"},{"id":5,"descrip":"leche"}]

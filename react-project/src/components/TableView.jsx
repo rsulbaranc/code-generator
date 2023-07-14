@@ -1,7 +1,7 @@
 import '../App.css'
 import * as React from 'react';
 
-const TableView = ({ sampleData }) => {
+const TableView = ({ sampleData, title }) => {
 
     const data = sampleData
     const keys = Object.keys(data.length ? data[0] : {});
@@ -16,7 +16,7 @@ const TableView = ({ sampleData }) => {
                 boxShadow: '1px 2px 25px gray',
             }}>
             <div class="title">
-                <h3>Table title</h3>
+                <h3>{title}</h3>
             </div>
             <div class="buttons">
                 <button style={{ margin: 2, width: '100%' }}>Guardar</button><br />
